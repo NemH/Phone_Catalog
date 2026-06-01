@@ -1,4 +1,4 @@
-# Phone Catalog Project | [DEMO PAGE](https://nemh.github.io/)
+# Phone Catalog Project | [DEMO PAGE](https://nemh.github.io/Phone_Catalog/)
 This project showcases a modern, fully-featured phone and gadget e-commerce catalog website designed to help users effortlessly browse, filter, and select high-quality smartphones, tablets, and accessories.
 
 ## ⚙️ Technologies Used
