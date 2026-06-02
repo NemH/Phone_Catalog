@@ -34,7 +34,7 @@ export const ProductCard: React.FC<Props> = ({ product, discount }) => {
               className={styles.image}
               src={product.image}
               alt={product.name}
-              width="200px"
+              width={200}
             />
           </div>
           <div className={styles.card__title}>{product.name}</div>
