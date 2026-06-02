@@ -47,6 +47,6 @@ npm install
 npm start
 ```
 
-The application will be available at http://localhost:8080.
+The application will be available at http://localhost:5173.
 
 The production-ready files will be generated in the dist folder.
