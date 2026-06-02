@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
 import styles from './Header.module.scss';
 import { NavLink } from 'react-router-dom';
 import { Icon } from '../Icon';
 import { HeaderNav } from '../HeaderNav/HeaderNav';
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
+import { useState } from 'react';
 
 export const Header = () => {
   const [isBurgerMenu, setIsBurgerMenu] = useState<boolean>(false);

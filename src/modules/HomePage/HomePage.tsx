@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import styles from './HomePage.module.scss';
 import { PicturesSlider } from '../../components/PicturesSlider';
 import { ProductSlider } from '../../components/ProductSlider';
@@ -10,6 +9,7 @@ import { getCategorys } from '../shared/constants/Categorys';
 import { CategoryBoxType } from '../../types/CategoryBoxType';
 import { banners } from '../shared/constants/Baners';
 import { Loader } from '../../components/Loader';
+import { useEffect, useState } from 'react';
 
 export const HomePage = () => {
   const [categorys, setCategorys] = useState<CategoryBoxType[] | null>(null);
