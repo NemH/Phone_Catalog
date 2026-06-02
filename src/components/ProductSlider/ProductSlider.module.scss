@@ -25,6 +25,7 @@ $desktop-card-width: 272px;
   .swiper {
     margin: -4px;
     padding: 4px;
+    min-height: 450px;
 
     @include on-tablet {padding-right: -24px}
 
@@ -32,15 +33,15 @@ $desktop-card-width: 272px;
 
     .card {
       display: flex;
-      width: $mobile-card-width !important;
-      height: auto !important;
+      width: $mobile-card-width;
+      height: auto;
 
       @include on-tablet {
-        width: $tablet-card-width !important;
+        width: $tablet-card-width;
       }
 
       @include on-desktop {
-        width: $desktop-card-width !important;
+        width: $desktop-card-width;
       }
 
       & > div {

@@ -32,35 +32,38 @@ export const ProductSlider: React.FC<SliderType> = ({
           </button>
         </div>
       </div>
-
-      <Swiper
-        spaceBetween={16}
-        slidesPerView="auto"
-        loop={false}
-        observer={true}
-        observeParents={true}
-        autoHeight={false}
-        setWrapperSize={true}
-        resizeObserver={true}
-        modules={[Navigation]}
-        navigation={{
-          prevEl: `.${prevClass}`,
-          nextEl: `.${nextClass}`,
-        }}
-        breakpoints={{
-          1200: {
-            slidesPerView: 4,
-            spaceBetween: 16,
-          },
-        }}
-        className={styles.swiper}
-      >
-        {products.map(product => (
-          <SwiperSlide key={product.id} className={styles.card}>
-            <ProductCard product={product} discount={discount || false} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      {products.length === 0 ? (
+        <div className={styles.skeletonContainer}></div>
+      ) : (
+        <Swiper
+          spaceBetween={16}
+          slidesPerView="auto"
+          loop={false}
+          observer={true}
+          observeParents={true}
+          autoHeight={false}
+          setWrapperSize={true}
+          resizeObserver={true}
+          modules={[Navigation]}
+          navigation={{
+            prevEl: `.${prevClass}`,
+            nextEl: `.${nextClass}`,
+          }}
+          breakpoints={{
+            1200: {
+              slidesPerView: 4,
+              spaceBetween: 16,
+            },
+          }}
+          className={styles.swiper}
+        >
+          {products.map(product => (
+            <SwiperSlide key={product.id} className={styles.card}>
+              <ProductCard product={product} discount={discount || false} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
     </div>
   );
 };
