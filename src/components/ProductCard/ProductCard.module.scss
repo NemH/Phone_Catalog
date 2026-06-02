@@ -71,7 +71,7 @@ $desktop-card-height: 506px;
 
     .image {
       max-width: 100%;
-      max-height: 100%;
+      height: auto;
       object-fit: contain;
       transition: transform $transition-time;
     }
