@@ -1,4 +1,3 @@
-import React, { useEffect, useMemo, useState } from 'react';
 import styles from './CatalogPage.module.scss';
 import { getCountByCategorys } from '../shared/constants/Categorys';
 import { getProductData } from '../../api/fetchClient';
@@ -11,6 +10,7 @@ import { SortType } from '../../types/SortType';
 import { Navigate, useParams, useSearchParams } from 'react-router-dom';
 import { PathLine } from '../../components/PathLine/PathLine';
 import { Loader } from '../../components/Loader';
+import { useEffect, useMemo, useState } from 'react';
 
 export const CatalogPage = () => {
   const { category } = useParams<{ category: string }>();
@@ -206,7 +206,9 @@ export const CatalogPage = () => {
 
         <div className={styles.items}>
           {loader ? (
-            <Loader />
+            <div className={styles.loaderContainer}>
+              <Loader />
+            </div>
           ) : (
             visibleProducts?.map(product => (
               <ProductCard

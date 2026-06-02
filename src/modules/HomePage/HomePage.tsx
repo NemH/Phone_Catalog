@@ -56,39 +56,35 @@ export const HomePage = () => {
 
   return (
     <>
-      {loader ? (
-        <Loader />
-      ) : (
-        <div className={styles.page}>
-          <div className={styles.title}>
-            <h1>Product Catalog</h1>
-          </div>
-          <div className={styles.content}>
-            <PicturesSlider banners={banners} id={1} />
-            {newModels ? (
-              <ProductSlider
-                products={newModels}
-                title={'Brand new models'}
-                id={0}
-                discount={false}
-              />
-            ) : (
-              <Loader />
-            )}
-            <CategoryBox categorys={categorys ?? []} />
-            {hotPrices ? (
-              <ProductSlider
-                products={hotPrices ?? []}
-                title={'Hot prices'}
-                id={2}
-                discount={true}
-              />
-            ) : (
-              <Loader />
-            )}
-          </div>
+      <div className={styles.page}>
+        <div className={styles.title}>
+          <h1>Product Catalog</h1>
         </div>
-      )}
+        <div className={styles.content}>
+          <PicturesSlider banners={banners} id={1} />
+          {newModels ? (
+            <ProductSlider
+              products={newModels}
+              title={'Brand new models'}
+              id={0}
+              discount={false}
+            />
+          ) : (
+            <div className={styles.skeletonSlider}>{loader && <Loader />}</div>
+          )}
+          <CategoryBox categorys={categorys ?? []} />
+          {hotPrices ? (
+            <ProductSlider
+              products={hotPrices ?? []}
+              title={'Hot prices'}
+              id={2}
+              discount={true}
+            />
+          ) : (
+            <div className={styles.skeletonSlider}>{loader && <Loader />}</div>
+          )}
+        </div>
+      </div>
     </>
   );
 };
