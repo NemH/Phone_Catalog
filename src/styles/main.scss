@@ -21,6 +21,7 @@ body{
 .app {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   background-color: $white-color;
 }
 
@@ -28,6 +29,7 @@ body{
   width: 100%;
   max-width: $desktop-content-max-width;
   margin: 0 auto;
+  flex-grow: 1;
 }
 
 h1 {

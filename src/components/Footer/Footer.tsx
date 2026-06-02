@@ -1,4 +1,3 @@
-import React from 'react';
 import { Icon } from '../Icon';
 import styles from './Footer.module.scss';
 import { Link } from 'react-router-dom';
