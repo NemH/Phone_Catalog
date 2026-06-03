@@ -59,6 +59,8 @@ export const Icon: React.FC<Props> = ({
       <img
         src={icons[logoKey]}
         alt={name}
+        width={64}
+        height={22}
         className={`${styles.logo} ${className || ''}`}
         onClick={onClick}
       />
