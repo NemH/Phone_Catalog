@@ -4,8 +4,17 @@ $cart-item-dt-height: 128px;
 $img-size: 80px;
 
 .page {
-  
-  padding-top: 40px;
+  max-width: $desktop-content-max-width;
+  margin: 0 auto;
+  padding: 40px 0 80px;
+
+  @include on-tablet {
+    padding: 24px 24px 64px;
+  }
+
+  @include on-mobile {
+    padding: 24px 18px 56px;
+  }
 
   .title {
     padding-top: 16px;
@@ -166,8 +175,8 @@ $img-size: 80px;
         @include on-mobile {
           display: grid;
           grid-template-areas:
-            "close image text"
-            "buttons buttons price";
+            'close image text'
+            'buttons buttons price';
           grid-template-columns: auto auto 1fr;
           gap: 16px;
           align-items: center;
