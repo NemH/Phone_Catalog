@@ -8,10 +8,6 @@ $img-size: 80px;
 
   padding-top: 40px;
 
-  @include on-tablet {
-    padding-top: 40px;
-  }
-
   .title {
     padding-top: 16px;
     color: $primary-color;
@@ -20,7 +16,6 @@ $img-size: 80px;
       padding-top: 24px;
     }
   }
-
 
   .back-button {
     cursor: pointer;

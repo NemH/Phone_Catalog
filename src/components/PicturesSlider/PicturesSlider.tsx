@@ -51,7 +51,7 @@ export const PicturesSlider: React.FC<Props> = ({ banners, id }) => {
           {banners.map((image, index) => (
             <SwiperSlide key={index}>
               <img
-                fetchPriority="high"
+                fetchPriority={index === 0 ? 'high' : 'auto'}
                 loading="eager"
                 src={image}
                 alt="image"
